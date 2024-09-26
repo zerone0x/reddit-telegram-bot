@@ -2,6 +2,9 @@
 
 This Python script fetches hot posts from random subreddits and sends them to a Telegram chat. It uses asyncio for asynchronous operations and environment variables for configuration.
 
+## Preview
+![CJjZxptest](https://cdn.jsdelivr.net/gh/h3x311/upic@main/LC3/2024/CJjZxptest.png)
+
 ## Features
 
 - Randomly selects subreddits from a predefined list
