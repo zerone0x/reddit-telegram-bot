@@ -1,5 +1,5 @@
 asyncpraw==7.7.1
 asyncprawcore==2.4.0
 python-telegram-bot==21.6
-aiohttp==3.8.4
+aiohttp==3.10.2
 environs==11.0.0
