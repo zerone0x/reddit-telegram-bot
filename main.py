@@ -61,7 +61,6 @@ async def main():
         for subreddit, posts in hot_posts.items():
             for post in posts:
                 message = f"{post['title']}\n\n{post['preview_image_url']}"
-                print(message)
                 await send_to_telegram(message)
         await asyncio.sleep(900)
 
