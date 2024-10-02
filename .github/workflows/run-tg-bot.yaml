@@ -30,6 +30,7 @@ jobs:
         REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
         REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
         SUBREDDITS: ${{ secrets.SUBREDDITS }}
+        SUBREDDITS_COUNT: ${{ secrets.SUBREDDITS_COUNT }}
       run: |
         set -x
         python main.py
