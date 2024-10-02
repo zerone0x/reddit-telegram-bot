@@ -3,7 +3,7 @@ name: reddit-tg-bot
 on:
   schedule:
     - cron: '*/30 * * * *'  # 每1/2时运行一次
-
+  workflow_dispatch: 
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -24,11 +24,10 @@ jobs:
 
     - name: Run script
       env:
-        TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        TOKEN: ${{ secrets.TOKEN }}
+        CHAT_ID: ${{ secrets.CHAT_ID }}
         REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
         REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
         REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
-        SUBREDDITS: 'subreddit1,subreddit2'
-        SUBREDDITS_COUNT: '5'
+        SUBREDDITS: ${{ secrets.SUBREDDITS }}
       run: python main.py
