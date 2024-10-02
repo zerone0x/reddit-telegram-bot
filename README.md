@@ -72,6 +72,10 @@ nohup python3 main.py &
 ```
 The bot will start fetching hot posts from random subreddits and sending them to the specified Telegram chat every 15 minutes.
 
+## Use with Github Actions
+
+- write env variables to github secrets
+
 ## License
 
 [MIT License](https://opensource.org/licenses/MIT)
