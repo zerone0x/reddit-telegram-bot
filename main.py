@@ -29,9 +29,6 @@ CREATE TABLE IF NOT EXISTS hot_posts (
 ''')
 connection.commit()
 
-def get_random_subreddits(subreddits):
-    return random.sample(subreddits, env.int('SUBREDDITS_COUNT'))
-
 async def get_hot_posts(subreddits, limit=200):
     reddit = asyncpraw.Reddit(
         client_id=env.str('REDDIT_CLIENT_ID'),
