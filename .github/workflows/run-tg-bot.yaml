@@ -20,7 +20,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install asyncpraw python-telegram-bot aiohttp environs
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
 
     - name: Run script
       env:
