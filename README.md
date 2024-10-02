@@ -66,7 +66,10 @@ After setting up the environment and configuring the variables, run the script:
 ```
 python main.py
 ```
-
+or 
+```
+nohup python3 main.py &
+```
 The bot will start fetching hot posts from random subreddits and sending them to the specified Telegram chat every 15 minutes.
 
 ## License
