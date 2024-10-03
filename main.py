@@ -36,10 +36,11 @@ async def get_hot_posts(subreddits, limit=100):
                 if images:
                     preview_image_url = images[0]['source']['url']
             # Store the result in a dictionary
-            hot_posts[subreddit].append({
-                'title': title,
-                'preview_image_url': preview_image_url or "No preview image available"
-            })
+            if preview_image_url:
+                hot_posts[subreddit].append({
+                    'title': title,
+                    'preview_image_url': preview_image_url
+                })
     return hot_posts
 async def send_to_telegram(message):
     await telegram_bot.send_message(chat_id=chat_id, text=message)
