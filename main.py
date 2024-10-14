@@ -11,7 +11,7 @@ telegram_bot = Bot(token=env.str('TOKEN'))
 chat_id = env.str('CHAT_ID')
 def get_random_subreddits(subreddits):
     return random.sample(subreddits, env.int('SUBREDDITS_COUNT'))
-async def get_hot_posts(subreddits, limit=100):
+async def get_hot_posts(subreddits, limit=200):
     reddit = asyncpraw.Reddit(
     client_id=env.str('REDDIT_CLIENT_ID'),
     client_secret=env.str('REDDIT_CLIENT_SECRET'),
