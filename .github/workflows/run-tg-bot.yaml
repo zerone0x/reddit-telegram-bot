@@ -3,7 +3,7 @@ name: reddit-tg-bot
 on:
   schedule:
     - cron: '*/40 * * * *'  
-  workflow_dispatch:
+  # workflow_dispatch:
   
 jobs:
   run-script:
